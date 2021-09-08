@@ -40,14 +40,14 @@ public class PTPlayer extends Cocos2dxActivity {
 		    	if(resultCode == RESULT_OK){
 		    		PTServicesBridge.instance().onActivityResult(requestCode, resultCode, data);
 		    		editor.putBoolean("GooglePlayServiceSignInError", false);
-					editor.commit();
+					editor.apply();
 		    	}
 		    	else if(resultCode == GamesActivityResultCodes.RESULT_SIGN_IN_FAILED){
 		    		int duration = Toast.LENGTH_SHORT;
 		    		Toast toast = Toast.makeText(this, "Google Play Services: Sign in error", duration);
 		    		toast.show();
 		    		editor.putBoolean("GooglePlayServiceSignInError", true);
-					editor.commit();
+					editor.apply();
 		    	}
 		    	else if(resultCode == GamesActivityResultCodes.RESULT_APP_MISCONFIGURED){
 		    		int duration = Toast.LENGTH_SHORT;

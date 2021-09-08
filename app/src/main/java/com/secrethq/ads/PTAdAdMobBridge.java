@@ -131,7 +131,7 @@ public class PTAdAdMobBridge {
 		            }
 		        });
 		
-				PTAdAdMobBridge.interstitial.loadAd(adRequest);
+//				PTAdAdMobBridge.interstitial.loadAd(adRequest);
             }
         });
 	}
